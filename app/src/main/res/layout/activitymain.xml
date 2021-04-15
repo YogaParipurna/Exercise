@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/iv_auth_bg3"
+        android:layout_width="360dp"
+        android:layout_height="260dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/ic_auth_background"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="ContentDescription" />
+
+    <TextView
+        android:id="@+id/tv_auth_title3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/nunito_sans_bold"
+        android:text="@string/text_sign_in"
+        android:textColor="@color/colorTextORIcon"
+        android:textSize="@dimen/text_title_size"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.076"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.081"
+        tools:targetApi="jelly_bean" />
+
+    <TextView
+        android:id="@+id/tv_auth_subtitle3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/nunito_sans_reguler"
+        android:text="@string/text_sign_in_subtitle"
+        android:textColor="@color/colorTextORIcon"
+        android:textSize="@dimen/text_subtitle_size"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.119"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_auth_title3"
+        app:layout_constraintVertical_bias="0.024"
+        tools:targetApi="jelly_bean" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/WrongMail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="23dp"
+        app:errorEnabled="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/iv_auth_bg3"
+        app:layout_constraintVertical_bias="0.0"
+        app:layout_editor_absoluteX="200dp">
+
+        <EditText
+            android:id="@+id/inputEmail"
+            android:layout_width="370dp"
+            android:layout_height="83dp"
+            android:layout_gravity="center"
+            android:layout_marginStart="@dimen/margin_auth"
+            android:layout_marginTop="40dp"
+            android:layout_marginEnd="@dimen/margin_auth"
+            android:background="@drawable/bg_auth_field"
+            android:drawableStart="@drawable/ic_mail"
+            android:drawableLeft="@drawable/ic_mail"
+            android:drawablePadding="@dimen/padding_field"
+            android:hint="@string/tEmail"
+            android:imeOptions="actionNext"
+            android:inputType="textEmailAddress"
+            android:padding="@dimen/padding_field"
+            android:textColor="@color/colorPrimaryText"
+            android:textColorHint="@color/colorSecondaryText"
+            android:textSize="@dimen/text_body_size" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/WrongPass"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:errorEnabled="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/WrongMail"
+        app:layout_constraintVertical_bias="0.0"
+        app:passwordToggleEnabled="true">
+
+        <EditText
+            android:id="@+id/inputPW"
+            android:layout_width="370dp"
+            android:layout_height="78dp"
+            android:layout_gravity="center"
+            android:layout_marginStart="@dimen/margin_auth"
+            android:layout_marginTop="@dimen/margin_default"
+            android:layout_marginEnd="@dimen/margin_auth"
+            android:background="@drawable/bg_auth_field"
+            android:drawableStart="@drawable/ic_password"
+            android:drawableLeft="@drawable/ic_password"
+            android:drawablePadding="@dimen/padding_field"
+            android:fontFamily="@font/nunito_sans_reguler"
+            android:hint="@string/tPassword"
+            android:imeOptions="actionDone"
+            android:inputType="textPassword"
+            android:padding="@dimen/padding_field"
+            android:textColor="@color/colorPrimaryText"
+            android:textColorHint="@color/colorSecondaryText"
+            android:textSize="@dimen/text_body_size" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/btnLogin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_auth"
+        android:layout_marginTop="21dp"
+        android:layout_marginEnd="@dimen/margin_auth"
+        android:background="@drawable/bg_auth_btn"
+        android:fontFamily="@font/nunito_sans_bold"
+        android:text="@string/tombol"
+        android:textColor="@color/colorTextORIcon"
+        android:textSize="@dimen/text_btn_size"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/WrongPass"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/registrasi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/nunito_sans_reguler"
+        android:text="Belum Terdaftar???"
+        android:textColor="@color/colorPrimaryText"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnLogin"
+        app:layout_constraintVertical_bias="0.296" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
